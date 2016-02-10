@@ -1,0 +1,183 @@
+
+<p><a href="#heading1">NAME</a><br/>
+<a href="#heading2">SYNOPSIS</a><br/>
+<a href="#heading3">AVAILABILITY</a><br/>
+<a href="#heading4">DESCRIPTION</a><br/>
+<a href="#heading5">OPTIONS</a><br/>
+<a href="#heading6">EXAMPLES</a><br/>
+<a href="#heading7">FILES</a><br/>
+<a href="#heading8">BUGS</a><br/>
+<a href="#heading9">SEE ALSO</a><br/>
+<a href="#heading10">AUTHOR</a><br/>
+
+</p>
+<hr/>
+
+
+<h2 id="heading1">NAME
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=rhost">rhost</a></b> -
+start a <b>ssh</b> session on a remote host in a new
+terminal window.</p>
+
+<h2 id="heading2">SYNOPSIS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=rhost">rhost</a></b>
+[<b>-c</b> <i>&lt;config_file&gt;</i>] [<b>-l</b>
+<i>&lt;login name&gt;</i>] [<b>-v</b>]
+<i>&lt;hostname&gt;</i> <br/>
+or <b><br/>
+&lt;hostname&gt;</b> [<b>-l</b> <i>&lt;login_name&gt;</i>]
+[<b>-v</b>]</p>
+
+<h2 id="heading3">AVAILABILITY
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b><a href="./scripts.php?script=rhost">rhost</a></b> is
+a Bourne shell script which should work equally well on all
+versions of UNIX and Linux.</p>
+
+<h2 id="heading4">DESCRIPTION
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">In the first
+form, using the command <b><a href="./scripts.php?script=rhost">rhost</a></b>, an X windows terminal
+session is started and a <b>ssh</b> session to the nominated
+remote host <i>&lt;hostname&gt;</i> is initiated.</p>
+
+<p style="margin-left:11%; margin-top: 1em">In the second
+form <b>&lt;host name&gt;</b> is a symbolic link to the
+script <b><a href="./scripts.php?script=rhost">rhost</a></b> and the <b>basename</b> of the command
+is assumed to be a valid hostname.</p>
+
+<p style="margin-left:11%; margin-top: 1em">In the event of
+no host name being set, an error message is printed on
+<i>standard error</i> but the <b>ssh</b> session will
+attempt to connect to <i>localhost</i>.</p>
+
+<p style="margin-left:11%; margin-top: 1em">Before
+attempting the direct connection <b><a href="./scripts.php?script=rhost">rhost</a></b> will attempt
+to <b>ping</b> the remote host. If no route to the host is
+found <b><a href="./scripts.php?script=rhost">rhost</a></b> will look up the hostid in the default
+<b>vn-connect</b> configuration file and if it appears a
+<b>VPN</b> connection is required will invoke
+<b>vn-connect</b> to establish a virtual network connection
+before proceeding.</p>
+
+<p style="margin-left:11%; margin-top: 1em">The script is
+most useful when different background colours are used for
+each host that is frequently accessed. Where an
+administrator is servicing multiple clients several
+concurrent sessions that are readily identifiable can be
+displayed. The virtual terminal will be <i>xterm</i> by
+default but alternatives may be set in configuration file.
+Background and foreground colours may also be set in the
+<b>config</b> file provided that application supports
+setting colours on the command line.</p>
+
+<h2 id="heading5">OPTIONS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em"><b>-c</b>
+<i>&lt;configuration_file&gt;</i></p>
+
+<p style="margin-left:18%;">Use the named configuration
+file in preference to the default &quot;
+<i>/usr/local/etc/rhost.cf</i></p>
+
+<p style="margin-left:11%;"><b>-l</b>
+<i>&lt;login_name&gt;</i></p>
+
+<p style="margin-left:18%;">The <b>ssh</b> will attempt to
+login with the username <i>&lt;login_name&gt; .</i></p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<colgroup><col width="11%"></col>
+<col width="3%"></col>
+<col width="4%" class="center"></col>
+<col width="82%"></col>
+</colgroup>
+<tr valign="top" align="left">
+<td></td>
+<td>
+
+
+<p><b>-v</b></p></td>
+<td></td>
+<td>
+
+
+<p>Verbose mode, the script will run with the <b>-x</b>
+option set.</p></td></tr>
+</table>
+
+<h2 id="heading6">EXAMPLES
+</h2>
+
+
+<pre style="margin-left:22%; margin-top: 1em"><a href="./scripts.php?script=rhost">rhost</a> -l william 10.0.0.3</pre>
+
+
+<p style="margin-left:11%; margin-top: 1em">Start a virtual
+terminal window with a <b>ssh</b> session to the host at
+10.0.0.3. The virtual terminal background will be yellow
+(see the example configuration file below), the text will
+use the default &quot;blue&quot;. Use the login name
+&quot;william&quot;</p>
+
+
+<p style="margin-left:22%; margin-top: 1em"><tt>dougal&amp;</tt></p>
+
+<p style="margin-left:11%; margin-top: 1em">Start a virtual
+terminal window with a <b>ssh</b> session to the host
+&quot;dougal&quot; with white text on a dark blue background
+(see the configuration file below). Use the current
+effective user name as the login name for <b>ssh</b>.</p>
+
+<p style="margin-left:11%; margin-top: 1em"><b>NB.</b>
+Foreground and background colours are set in the
+configuration file as in the example below.</p>
+
+<h2 id="heading7">FILES
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i><a href="./scripts.php?script=rhost.cf">rhost.cf</a></i>.</p>
+
+<h2 id="heading8">BUGS
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">The script has
+very little input error checking. Name resolution and
+network availability is not checked. It is designed to be
+used with frequently used host names where <b>ssh</b> keys
+have already been exchanged.</p>
+
+<h2 id="heading9">SEE ALSO
+</h2>
+
+
+
+<p style="margin-left:11%; margin-top: 1em"><i>vn-connect</i>.</p>
+
+<h2 id="heading10">AUTHOR
+</h2>
+
+
+<p style="margin-left:11%; margin-top: 1em">Clifford W
+Fulford, <a href="http://www.citylinux.com"
+title="Go to the City Linux homepage">
+City Linux
+</a>. Contact <a href="mailto:fulford@fulford.net" title="Send mail to Clifford W Fulford">fulford@fulford.net</a> or +44
+(0)709 229 5385.</p>
+<hr/>

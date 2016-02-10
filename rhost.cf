@@ -1,0 +1,89 @@
+<pre>
+
+# $Id: rhost.cf,v 1.29 2016/02/07 17:46:40 fulford Exp $
+# $Source: /src/merlin/usr/local/etc/RCS/rhost.cf,v $
+# $Revision: 1.29 $
+# Maintained by C W Fulford.
+# Licensed for public use under the LGPL, .
+# For assistance contact fulford@fulford.net 0709 229 5385
+########################################################################
+# NB  terminal does not support setting foreground and background colours
+arthur:
+	bg=purple
+	
+boudica:
+	bg=green
+
+caswallon-gw:
+	bg=blue
+	fg=white
+	vterm=xterm
+
+florence:	
+	bg=yellow
+	vterm=xterm
+
+merlin:
+	vterm=terminal
+
+dougal:
+	bg=red
+	fg=white
+	vterm=xterm
+
+architects:
+	bg=purple
+	fg=white
+	host=server-2
+	conn=vpn
+
+mailboy:
+	bg=red
+	fg=white
+	conn=ssh
+
+mailboy2:
+	bg=orange
+	fg=white
+	cons=ssh
+	port=222
+
+nh05:
+	bg='darkorange'
+	fg=white
+	vterm=xterm
+	conn=ssh
+	host=nh
+	port=225
+
+nh06:
+	bg=purple
+	fg=white
+	vterm=xterm
+	conn=ssh
+	host=nh
+	port=226
+
+emeriqa:
+	bg=purple
+	fg=white
+	host=emeriqa
+	conn=xterm
+	port=222
+
+######################################################################
+# This program is free software: you can redistribute it and or      #
+# modify it under the terms of the Lesser GNU General Public License #
+# as published by the Free Software Foundation, either version 3 of  #
+# the License, or (at your option) any later version.                #
+#                                                                    #
+# This program is distributed in the hope that it will be useful,    #
+# but WITHOUT ANY WARRANTY; without even the implied warranty of     #    
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the      #
+# GNU General Public License for more details.                       #
+#                                                                    # 
+# A copy of the Lesser GNU General Public License and the GNU        #
+# General Public License is available at                             #
+# &#60;http://www.gnu.org/licenses/&#62;.                                    #
+######################################################################
+</pre>
