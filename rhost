@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.28 2016/02/10 10:51:51 fulford Exp fulford $
+# $Id: rhost,v 1.29 2016/02/10 10:58:31 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -24,7 +24,7 @@ config=${config:-/usr/local/etc/rhost.cf}
 bg=${bg:-yellow}
 fg=${fg:-blue}
 port=22
-vterm=${vter:-xterm}
+vterm=${vterm:-xterm}
 
 if [ -z $host ];then
 	host=`basename $0`
@@ -44,8 +44,8 @@ if [ -f "$config" ] ;then
 else
 	echo "$cmd: $config not found" >&2
 fi
-[ $xforward ] && params="$params -X"
-[ $verbose ] && echo $params >&2
+[ $xforward ] && spara="$spara -X"
+[ $verbose ] && echo $spara >&2
 
 ping -c 1 -W 1 $host >/dev/null ||{
 	case $conn in
@@ -54,7 +54,7 @@ ping -c 1 -W 1 $host >/dev/null ||{
 }
 
 case $vterm  in 
-	   xterm) $vterm -display :0.0 -bg $bg -fg $fg -T $host -geometry 80x24 -fs 10 -e "ssh $sshv -p $port $login $host";;
+	   xterm) $vterm -display :0.0 -bg $bg -fg $fg -T $host -geometry 80x24 -fs 10 -e "ssh $sshv $spara -p $port $login $host";;
 	terminal) $vterm --title=$host -e "ssh $login -p $port $host";;
 esac
 [ $teardown ] && $teardown
