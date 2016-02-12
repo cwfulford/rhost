@@ -1,8 +1,8 @@
 <pre>
 
-# $Id: rhost.cf,v 1.29 2016/02/07 17:46:40 fulford Exp $
+# $Id: rhost.cf,v 1.31 2016/02/12 13:00:19 fulford Exp $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.29 $
+# $Revision: 1.31 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -31,6 +31,12 @@ dougal:
 	fg=white
 	vterm=xterm
 
+irmc:
+	bg=red
+	fg=white		
+	vter=xterm
+	port=22
+
 architects:
 	bg=purple
 	fg=white
@@ -45,7 +51,7 @@ mailboy:
 mailboy2:
 	bg=orange
 	fg=white
-	cons=ssh
+	conn=ssh
 	port=222
 
 nh05:
