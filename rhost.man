@@ -62,7 +62,9 @@ will attempt to
 .B ping
 the remote host. If no route to the host is found
 .B rhost
-will look up the hostid in the default
+will look up the 
+.I hostid
+in the default
 .B vn-connect
 configuration file and if it appears a 
 .B VPN
