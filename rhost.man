@@ -110,7 +110,7 @@ option set.
 .IP
 .nf
 .ft CW
-rhost -l william 10.0.0.3
+	rhost -l william 10.0.0.3
 .fi
 .ft R
 .LP
@@ -121,7 +121,7 @@ yellow (see the example configuration file below), the text will use
 the default "blue". Use the login name "william"
 .IP
 .ft CW
-dougal&
+	dougal&
 .ft R
 .LP
 Start a virtual terminal window with a
