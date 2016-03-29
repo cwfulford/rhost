@@ -88,18 +88,21 @@ file provided that application supports setting colours on the command line.
 .TP 5
 .B -c
 .I <configuration_file>
+.IP
 Use the named configuration file in preference to the default "
 .B /usr/local/etc/rhost.cf
 "
 .TP 5
 .B -l
 .I <login_name>
+.IP
 The 
 .B ssh 
 will attempt to login with the username 
 .I <login_name> .
 .TP 5
 .B -v
+.IP
 Verbose mode, the script will run with the 
 .B -x
 option set.
