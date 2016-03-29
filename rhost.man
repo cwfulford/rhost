@@ -5,7 +5,14 @@
 .B ssh
 session on a remote host in a new terminal window.
 .SH SYNOPSIS
-\fBrhost\fR [\fB-c \fI<config_file>\fR] [\fB-l \fI<login name>\fR]
+.B rhost
+[
+.B -c 
+.I <config_file>
+] [
+.B -l
+.I <login name>
+]
 [\fB-v\fR] \fI<hostname>\fR
 .br
 or
