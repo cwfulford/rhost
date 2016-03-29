@@ -30,8 +30,7 @@ and Linux.
 .SH DESCRIPTION
 In the first form, using the command
 .B rhost
-,
-an X windows terminal session is started and a 
+, an X windows terminal session is started and a 
 .B ssh
 session to the nominated remote host 
 .I <hostname>
