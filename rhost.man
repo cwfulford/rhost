@@ -68,7 +68,9 @@ in the default
 .B vn-connect
 configuration file and if it appears a 
 .B VPN
-connection is required will invoke 
+connection is required
+.B rhost
+will invoke 
 .B vn-connect
 to establish a virtual network connection before proceeding.
 .LP
@@ -84,18 +86,23 @@ foreground colours may also be set in the
 file provided that application supports setting colours on the command line.
 .SH OPTIONS
 .TP 5
-\fB-c \fI<configuration_file>\fR
-Use the named configuration file in preference to the default "\fB/usr/local/etc/rhost.cf\fR"
- 
+.B -c
+.I <configuration_file>
+Use the named configuration file in preference to the default "
+.B /usr/local/etc/rhost.cf
+"
 .TP 5
-\fB-l \fI<login_name>\fR
+.B -l
+.I <login_name>
 The 
 .B ssh 
 will attempt to login with the username 
 .I <login_name> .
 .TP 5
-\fB-v\fR
-Verbose mode, the script will run with the \fB-x\fR option set.
+.B -v
+Verbose mode, the script will run with the 
+.B -x
+option set.
 .SH EXAMPLES
 .IP
 .nf
