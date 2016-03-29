@@ -33,6 +33,7 @@ and Linux.
 .SH DESCRIPTION
 .LP
 In the first form, using the command
+dog dog
 .B rhost
 , an X windows terminal session is started and a 
 .B ssh
