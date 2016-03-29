@@ -18,7 +18,11 @@ session on a remote host in a new terminal window.
 or
 .br
 \fB<hostname> \fR
-[\fB-l \fI<login_name>\fR] [\fB-v\fR]
+.B -l
+.I <login_name>
+] [
+.B -v
+]
 .SH AVAILABILITY
 .B rhost
 is a Bourne shell script which should work equally well on all versions of UNIX
