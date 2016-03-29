@@ -88,14 +88,14 @@ file provided that application supports setting colours on the command line.
 .TP 5
 .B -c
 .I <configuration_file>
-.IP
+.LP
 Use the named configuration file in preference to the default "
 .B /usr/local/etc/rhost.cf
 "
 .TP 5
 .B -l
 .I <login_name>
-.IP
+.LP
 The 
 .B ssh 
 will attempt to login with the username 
