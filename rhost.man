@@ -102,7 +102,7 @@ will attempt to login with the username
 .I <login_name> .
 .TP 5
 .B -v
-.IP
+.LP
 Verbose mode, the script will run with the 
 .B -x
 option set.
