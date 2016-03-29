@@ -29,7 +29,8 @@ is a Bourne shell script which should work equally well on all versions of UNIX
 and Linux.
 .SH DESCRIPTION
 In the first form, using the command
-.BR rhost ,
+.B rhost
+,
 an X windows terminal session is started and a 
 .B ssh
 session to the nominated remote host 
