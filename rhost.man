@@ -67,8 +67,7 @@ file provided that application supports setting colours on the command line.
 .SH OPTIONS
 .TP 5
 \fB-c \fI<configuration_file>\fR
-Use the named configuration file in preference to the default "
-.IR /usr/local/etc/rhost.cf "
+Use the named configuration file in preference to the default "\fB/usr/local/etc/rhost.cf\fR"
  
 .TP 5
 \fB-l \fI<login_name>\fR
