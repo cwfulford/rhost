@@ -1,13 +1,13 @@
 <h2 id="heading1">NAME</h2>
 <p class="indent">
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 - start a 
 <b>ssh</b>
 session on a remote host in a new terminal window.
 </p>
 <h2 id="heading2">SYNOPSIS</h2>
 <p class="indent">
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 [
 <b>-c </b>
 <i>&lt;config_file&gt;</i>
@@ -31,7 +31,7 @@ or
 </p>
 <h2 id="heading3">AVAILABILITY</h2>
 <p class="indent">
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 is a Bourne shell script which should work equally well on all versions of UNIX
 and Linux.
 </p>
@@ -40,7 +40,7 @@ and Linux.
 </p>
 <p class="indent">
 In the first form, using the command
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 , an X windows terminal session is started and a 
 <b>ssh</b>
 session to the nominated remote host 
@@ -51,7 +51,7 @@ is initiated.
 In the second form
 <b>&lt;host name&gt;</b>
 is a symbolic link to the script 
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 and the
 <b>basename</b>
 of the command is assumed to be a valid hostname.
@@ -67,11 +67,11 @@ session will attempt to connect to
 </p>
 <p class="indent">
 Before attempting the direct connection
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 will attempt to 
 <b>ping</b>
 the remote host. If no route to the host is found
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 will look up the 
 <i>hostid</i>
 in the default
@@ -79,7 +79,7 @@ in the default
 configuration file and if it appears a 
 <b>VPN</b>
 connection is required
-<b>rhost</b>
+<b><a href="./scripts.php?script=rhost">rhost</a></b>
 will invoke 
 <b>vn-connect</b>
 to establish a virtual network connection before proceeding.
@@ -100,16 +100,16 @@ file provided that application supports setting colours on the command line.
 <p class="indent">
 </p>
 <p class="indent">
-<b>-c</b>
+<b>-c</b>&nbsp;&nbsp;&nbsp;
 <i>&lt;configuration_file&gt;</i>
 </p>
 <p class="indent">
 Use the named configuration file in preference to the default "
-<b>/usr/local/etc/rhost.cf</b>
+<b>/usr/local/etc/<a href="./scripts.php?script=rhost.cf">rhost.cf</a></b>
 "
 </p>
 <p class="indent">
-<b>-l</b>
+<b>-l</b>&nbsp;&nbsp;&nbsp;
 <i>&lt;login_name&gt;</i>
 </p>
 <p class="indent">
@@ -119,19 +119,21 @@ will attempt to login with the username
 <i>&lt;login_name&gt; .</i>
 </p>
 <p class="indent">
-<b>-v</b>
+<b>-v</b>&nbsp;&nbsp;&nbsp;
 </p>
 <p class="indent">
 Verbose mode, the script will run with the 
-<b>-x</b>
+<b>-x</b>&nbsp;&nbsp;&nbsp;
 option set.
 </p>
 <h2 id="heading6">EXAMPLES</h2>
 <p class="indent">
 
+</p><div class="cmdline">
 <pre>
 	rhost -l william 10.0.0.3
-</pre>
+</pre></div>
+<p class="indent">
 </p>
 <p class="indent">
 Start a virtual terminal window with a
@@ -140,9 +142,11 @@ session to the host at 10.0.0.3. The virtual terminal background will be
 yellow (see the example configuration file below), the text will use
 the default "blue". Use the login name "william"
 
+</p><div class="cmdline">
 <pre>
 	dougal&
-</pre>
+</pre></div>
+<p class="indent">
 </p>
 <p class="indent">
 Start a virtual terminal window with a
@@ -150,7 +154,7 @@ Start a virtual terminal window with a
 session to the host "dougal" with white text on a dark blue background (see
 the configuration file below). Use
 the current effective user name as the login name for
-.BR ssh .
+<b>ssh.</b>
 
 <b>NB.</b>
 Foreground and background colours are set in the configuration file as in the
@@ -158,7 +162,7 @@ example below.
 </p>
 <h2 id="heading7">FILES</h2>
 <p class="indent">
-<i>rhost.cf</i>.
+<i><a href="./scripts.php?script=rhost.cf">rhost.cf</a></i>.
 
 </p>
 <h2 id="heading8">BUGS</h2>
@@ -176,3 +180,5 @@ keys have already been exchanged.
 <h2 id="heading10">AUTHOR</h2>
 <p class="indent">
 Clifford W Fulford, City Linux. Contact fulford@fulford.net or +44 (0)709 229 5385.
+</p>
+	
