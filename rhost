@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.42 2016/07/13 20:46:58 fulford Exp fulford $
+# $Id: rhost,v 1.43 2016/07/13 20:51:20 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -57,8 +57,8 @@ ping -c 1 -W 1 $host >/dev/null ||{
 }
 
 case $vterm  in 
-	   lxterminal) $vterm --display :0.0  -t $host --geometry=80x24 -e "ssh $sshv $spara -p $port $login $host";;
-	   xterm) $vterm -display :0.0 -bg $bg -fg $fg -T $host -geometry 80x24 -fs 10 -e "ssh $sshv $spara -p $port $login $host";;
+	   lxterminal) $vterm --display $DISPLAY  -t $host --geometry=80x24 -e "ssh $sshv $spara -p $port $login $host";;
+	   xterm) $vterm -display $DISPLAY -bg $bg -fg $fg -T $host -geometry 80x24 -fs 10 -e "ssh $sshv $spara -p $port $login $host";;
 	terminal) $vterm --title=$host -e "ssh $login -p $port $host";;
 esac
 [ $teardown ] && $teardown
