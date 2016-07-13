@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.40 2016/06/27 07:37:32 fulford Exp fulford $
+# $Id: rhost,v 1.41 2016/07/13 20:41:25 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -26,6 +26,7 @@ bg=${bg:-yellow}
 fg=${fg:-blue}
 port=22
 vterm=${vterm:-xterm}
+DISPLAY=${DISPLAY:-localhost:0.0}
 
 if [ -z $host ];then
 	host=`basename $0`
