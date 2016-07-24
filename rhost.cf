@@ -1,8 +1,8 @@
 <pre>
 
-# $Id: rhost.cf,v 1.50 2016/07/24 17:57:52 fulford Exp $
+# $Id: rhost.cf,v 1.51 2016/07/24 19:25:45 fulford Exp $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.50 $
+# $Revision: 1.51 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -29,7 +29,7 @@ bfl-irmc:
 
 bfl-vms:
 	bg=orange
-	fg=indigo
+	fg=darkblue
 	conn=ssh
 	port=226
 

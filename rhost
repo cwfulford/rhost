@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.48 2016/07/24 19:21:30 fulford Exp fulford $
+# $Id: rhost,v 1.49 2016/07/24 19:30:28 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -48,7 +48,7 @@ else
 	echo "$cmd: $config not found" >&2
 fi
 [ $xforward ] && spara="$xforward"
-[ $fsize ] && spara="$spara -fs $fsize"
+[ $fsize ] && para="$para -fs $fsize"
 [ $verbose ] && echo $spara >&2
 
 ping -c 1 -W 1 $host >/dev/null ||{
@@ -60,7 +60,7 @@ ping -c 1 -W 1 $host >/dev/null ||{
 
 case $vterm  in 
 	   lxterminal) $vterm --display $DISPLAY  -t $host --geometry=80x24 -e "ssh $sshv $spara -p $port $login $host";;
-	   xterm) $vterm -display $DISPLAY -bg $bg -fg $fg  -T $host -geometry 80x24  -e "ssh $sshv $spara -p $port $login $host";;
+	   xterm) $vterm -display $DISPLAY -bg $bg $para -fg $fg  -T $host -geometry 80x24  -e "ssh $sshv $spara -p $port $login $host";;
 	terminal) $vterm --title=$host -e "ssh $login -p $port $host";;
 esac
 [ $teardown ] && $teardown
