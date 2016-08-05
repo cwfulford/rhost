@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.49 2016/07/24 19:30:28 fulford Exp fulford $
+# $Id: rhost,v 1.50 2016/08/05 15:26:19 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -7,14 +7,14 @@
 # For assistance contact fulford@fulford.net 0709 229 5385
 ###################################################################
 cmd=`basename $0`
-syntax="$cmd [-c <config file>] [-d] [-fs #] [-l <login name>] [-t <TERM>] [-v] [-X] [-Y] <hostname>\nor\n
- <hostname> [-c <config_file>] [-d] [-fs #] [-l <login_name>] [-t <TERM>] [-v] [-X] [-Y] <hostname>"
+syntax="$cmd [-c <config file>] [-d] [-fs #] [-l <login name>] [-t <TERM>] [-u <username>] [-v] [-X] [-Y] <hostname>\nor\n
+ <hostname> [-c <config_file>] [-d] [-fs #] [-l <login_name>] [-t <TERM>] [-u <username>] [-v] [-X] [-Y] <hostname>"
 while [ $# -gt 0 ];do
 	case $1 in
 		-c) config=$2;shift 2;;
 		-d) set -x;debug=:;shift;;
 		-fs) fsize=$2;shift;;
-		-l) login="-l $2";shift 2;;
+		-l) login=$2";shift 2;;
 		-t) vterm=$2;shift 2;;
 		-v) set -x;sshv="-v";shift;;
 		-X | -Y ) xforward=$1;shift;;
@@ -49,6 +49,7 @@ else
 fi
 [ $xforward ] && spara="$xforward"
 [ $fsize ] && para="$para -fs $fsize"
+[ $login ] && spara="$spara -l $login" 
 [ $verbose ] && echo $spara >&2
 
 ping -c 1 -W 1 $host >/dev/null ||{

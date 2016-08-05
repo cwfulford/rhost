@@ -1,13 +1,18 @@
 <pre>
 
-# $Id: rhost.cf,v 1.51 2016/07/24 19:25:45 fulford Exp $
+# $Id: rhost.cf,v 1.54 2016/08/05 15:21:26 fulford Exp $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.51 $
+# $Revision: 1.54 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
 ########################################################################
 # NB  terminal does not support setting foreground and background colours
+robustica:
+	bg=pink
+	conn=ssh
+	login=robustica.co.uk
+
 arthur:
 	bg=purple
 
