@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.50 2016/08/05 15:26:19 fulford Exp fulford $
+# $Id: rhost,v 1.51 2016/08/05 15:27:08 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -14,7 +14,7 @@ while [ $# -gt 0 ];do
 		-c) config=$2;shift 2;;
 		-d) set -x;debug=:;shift;;
 		-fs) fsize=$2;shift;;
-		-l) login=$2";shift 2;;
+		-l) login=$2;shift 2;;
 		-t) vterm=$2;shift 2;;
 		-v) set -x;sshv="-v";shift;;
 		-X | -Y ) xforward=$1;shift;;
