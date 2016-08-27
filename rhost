@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: rhost,v 1.52 2016/08/05 15:35:59 fulford Exp fulford $
+# $Id: rhost,v 1.53 2016/08/27 20:27:16 fulford Exp fulford $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost,v $
 # $Release$
 # Author C W Fulford.
@@ -47,6 +47,7 @@ if [ -f "$config" ] ;then
 else
 	echo "$cmd: $config not found" >&2
 fi
+para="-fn 10x20 -sb -sm -sl 4000"
 [ $xforward ] && spara="$xforward"
 [ $fsize ] && para="$para -fs $fsize"
 [ $login ] && spara="$spara -l $login" 
