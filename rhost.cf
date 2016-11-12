@@ -1,8 +1,8 @@
 <pre>
 
-# $Id: rhost.cf,v 1.55 2016/08/05 15:28:54 fulford Exp $
+# $Id: rhost.cf,v 1.56 2016/10/25 08:54:40 fulford Exp $
 # $Source: /src/merlin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.55 $
+# $Revision: 1.56 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -49,6 +49,7 @@ bfl-uw:
 boudica:
 	bg=green
 
+caswallon:
 caswallon-gw:
 casswallon-gw:
 	bg=blue
