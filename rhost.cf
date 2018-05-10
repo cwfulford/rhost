@@ -1,8 +1,8 @@
 <pre>
 
-# $Id: rhost.cf,v 1.56 2016/10/25 08:54:40 fulford Exp $
-# $Source: /src/merlin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.56 $
+# $Id: rhost.cf,v 1.69 2018/02/06 08:48:51 fulford Exp $
+# $Source: /src/admin/usr/local/etc/RCS/rhost.cf,v $
+# $Revision: 1.69 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -16,6 +16,17 @@ robustica:
 
 arthur:
 	bg=purple
+
+badon-hill:
+	bg=purple
+	fg=white
+	conn=ssh
+	login=root
+
+bastion-0:
+	bg=red
+	fg=white
+	conn=ssh
 
 belpark:
 	bg=red
@@ -34,7 +45,7 @@ bfl-irmc:
 	port=225
 
 bfl-vms:
-	bg=orange
+	bg=darkorange
 	fg=darkblue
 	conn=ssh
 	port=226
@@ -48,6 +59,14 @@ bfl-uw:
 
 boudica:
 	bg=green
+
+caswallon2:
+	bg=green
+	fg=darkblue
+
+caswallon3:
+	bg=orange
+	fg=blue
 
 caswallon:
 caswallon-gw:
