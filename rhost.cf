@@ -1,8 +1,8 @@
 <pre>
 
-# $Id: rhost.cf,v 1.70 2018/06/16 16:38:30 fulford Exp $
+# $Id: rhost.cf,v 1.71 2018/07/01 08:03:01 fulford Exp fulford $
 # $Source: /src/admin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.70 $
+# $Revision: 1.71 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -65,10 +65,12 @@ caswallon2:
 	bg=green
 	fg=darkblue
 
+tx-slkweb:
 caswallon3:
 	bg=orange
 	fg=blue
 
+tx-slkmail:
 caswallon:
 caswallon-gw:
 casswallon-gw:
@@ -80,9 +82,11 @@ florence:
 	bg=yellow
 	term=xterm
 
+vmerlin:
 merlin:
 	term=terminal
 	fsize=10
+	bg=yellow
 
 dougal:
 	bg=red
