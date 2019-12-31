@@ -1,8 +1,8 @@
 <pre>
 
-# $Id: rhost.cf,v 1.71 2018/07/01 08:03:01 fulford Exp $
+# $Id: rhost.cf,v 1.85 2019/12/31 09:09:15 fulford Exp fulford $
 # $Source: /src/admin/usr/local/etc/RCS/rhost.cf,v $
-# $Revision: 1.71 $
+# $Revision: 1.85 $
 # Maintained by C W Fulford.
 # Licensed for public use under the LGPL, .
 # For assistance contact fulford@fulford.net 0709 229 5385
@@ -37,7 +37,7 @@ bfl:
 	bg=red
 	fg=white
 	conn=ssh
-	port=22
+	port=224
 
 bfl-irmc:
 	bg=red
@@ -64,6 +64,7 @@ boudica:
 caswallon2:
 	bg=green
 	fg=darkblue
+
 
 tx-slkweb:
 caswallon3:
@@ -138,12 +139,18 @@ nh06:
 	port=226
 
 emeriqa:
-	bg=purple
+	bg=pink
 	fg=white
-	host=emeriqa
-	conn=xterm
 	port=222
+	#host=dev.emeriqa.co.uk
+	host=emeriqa
+	terminal=local
 
+vin543:
+	bg=orange
+	fg=blue
+	host=vin543
+	conn=xterm
 ######################################################################
 # This program is free software: you can redistribute it and or      #
 # modify it under the terms of the Lesser GNU General Public License #
